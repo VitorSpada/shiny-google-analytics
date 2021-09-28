@@ -1,5 +1,6 @@
-﻿library(RGoogleAnalytics)
+
 # load the required packages
+library(RGoogleAnalytics)
 library(shiny)
 library(shinydashboard) 
 library(ggplot2)
