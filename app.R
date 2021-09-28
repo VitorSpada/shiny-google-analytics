@@ -311,8 +311,8 @@ server <- function(input, output) {
     colnames(z) <- c("date","bounces","pageViews","sessions")
     d<-z[input$variavel]
     
-    ts_beer = ts(d,  start=c(2018, 1), end=c(2019,1),frequency = 365)
-    fit <- auto.arima(ts_beer,D=1)
+    ts_ga = ts(d,  start=c(2018, 1), end=c(2019,1),frequency = 365)
+    fit <- auto.arima(ts_ga,D=1)
     fcast <- forecast(fit, input$periodo)
     serie<-as.data.frame(fcast$x)
     date <- seq(as.Date("2018-01-01"), length=366, by="days")
